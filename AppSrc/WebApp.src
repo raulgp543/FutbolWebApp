@@ -145,6 +145,7 @@ Object oWebApp is a cWebApp
     
     Use Dashboard.wo
     Use SelectEntrenador.wo
+    Use ZoomEntrenador.wo
     Set phoDefaultView to oDashboard
 
 End_Object

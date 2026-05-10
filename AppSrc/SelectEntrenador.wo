@@ -138,7 +138,7 @@ Error DFERR_PROGRAM "NavigateForward to this from-parent child Select view not y
             Set psCaption to "New"
 
 // ToDo: Fill in the from-main Zoom view object name for navigate forward
-//            WebRegisterPath ntNavigateForward oZoomView
+            WebRegisterPath ntNavigateForward oZoomEntrenador
 
             Procedure OnClick
                 Send NavigatePath
