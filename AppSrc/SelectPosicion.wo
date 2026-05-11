@@ -51,7 +51,7 @@ Object oSelectPosicion is a cWebView
             Set peAlign to alignRight
 
 // ToDo: Fill in the from-main Zoom view object name for navigate forward
-//            WebRegisterPath ntNavigateForward oZoomView
+            WebRegisterPath ntNavigateForward oZoomPosicion
 
             Procedure OnClick
                 Send NavigatePath
