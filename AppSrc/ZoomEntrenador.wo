@@ -64,29 +64,23 @@ Object oZoomEntrenador is a cWebView
             Set psLabel to "Nacionalidad"
         End_Object 
 
-        Object oEquipoID is a cWebCombo
+        Object oEquipoID is a cWebForm
             Entry_Item entrenador.EquipoID
 
             Set psLabel to "Equipo"
             Set piColumnSpan to 2
             Set piColumnIndex to 0
             Set peLabelPosition to lpTop
+            Set pbPromptButton to True
 
-            Procedure OnFill
-                Clear equipo
-                Repeat
-                    Find gt equipo by Index.1
-                        If (Found) Begin
-                            Send AddComboItem equipo.Nombre equipo.ID
-                        End
-                    Until (not(Found))
+// ToDo: Fill in the from-child parent Select view object name for navigate forward
+            WebRegisterPath ntNavigateForward oSelectEquipo
+
+            Procedure OnPrompt
+                Send NavigatePath
             End_Procedure
-
-    Procedure OnSetDisplayValue String sValue
-        Forward Send OnSetDisplayValue sValue
-        WebSet psValue to sValue
-    End_Procedure
-      End_Object
+            
+        End_Object
     End_Object 
 
     Object oActionGroup is a cWebMenuGroup
