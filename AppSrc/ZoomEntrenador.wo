@@ -90,7 +90,6 @@ Object oZoomEntrenador is a cWebView
             Set psCaption to "Save"
 
             Procedure OnClick
-                Showln Entrenador.EquipoID
                 Send Request_Save
             End_Procedure
 
