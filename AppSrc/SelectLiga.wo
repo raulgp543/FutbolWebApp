@@ -158,6 +158,10 @@ Error DFERR_PROGRAM "NavigateForward to this from-parent child Select view not y
 
             Case (NavigateData.eNavigateType = nfFromChild)
                 // If from child, this is a probably a parent lookup from a Zoom
+                String sMsg
+    
+                Move (SFormat("From Child%1InvokingObject handle: %2%1Nombre: %3", Character(10), String(hoInvokingObject), String(Name(hoInvokingObject)))) to sMsg
+                Send ShowInfoBox sMsg
                 Case Break
 
             Case (NavigateData.eNavigateType = nfFromMain)
