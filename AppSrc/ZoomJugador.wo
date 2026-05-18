@@ -78,7 +78,19 @@ Object oZoomJugador is a cWebView
             Procedure OnPrompt
                 Send NavigatePath
             End_Procedure
-        End_Object 
+        End_Object
+        
+        Object oButtonPosicion is a cWebButton
+            Set psCaption to "Ver Posiciones"
+            Set piColumnSpan to 4
+            Set piColumnIndex to 0
+    
+            WebRegisterPath ntNavigateForward oSelectPosicion
+    
+            Procedure OnClick
+                Send NavigateForward of oSelectPosicion Self
+            End_Procedure
+        End_Object
     End_Object 
 
     Object oActionGroup is a cWebMenuGroup
